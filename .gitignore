@@ -38,10 +38,6 @@ Thumbs.db
 /.idea
 .idea
 markup
-/sites/*/settings*.php
-/sites/*/*local.conf*.php
-info.php
-/.settings
 /.buildpath
 /.project
 /wvr.iml
