@@ -41,10 +41,11 @@ public class MarsRobot implements Robot {
 
     @Override
     public void showAttributes() {
-        System.out.println("Status:"+status);
-
-        System.out.println("Speed:"+speed);
-        System.out.println("Temperature:"+temperature);
+        System.out.println("**********************************");
+        System.out.println("* Name:"+Name);
+        System.out.println("* Status:"+status);
+        System.out.println("* Speed:"+speed);
+        System.out.println("* Temperature:"+temperature);
     }
 
     @Override
