@@ -8,8 +8,8 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) {
-     App mainF = new App();
-
+//     App mainF = new App();
+   Authenticator a = new Authenticator();
 
     }
 

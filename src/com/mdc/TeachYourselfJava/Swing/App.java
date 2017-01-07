@@ -23,9 +23,13 @@ public class App extends JFrame {
 
     private void CreateToolbar() {
         JPanel toolbar = new JPanel();
+        JTextArea address = new JTextArea("Adress");
+        JTextField name = new JTextField("Name");
         JButton start = new JButton("Start");
-
         toolbar.add(start);
+
+        toolbar.add(address);
+        toolbar.add(name);
         add(toolbar);
     }
 }
