@@ -39,8 +39,8 @@ public class Plane extends Group {
             public void handle(MouseEvent event) {
                 drag.mouseAnchorX = event.getX();
                 drag.mouseAnchorY = event.getY();
-                for( Node item : instance.getChildren() ) {
-                    setClass(item,"square_grid_plane_move");
+                for (Node item : instance.getChildren()) {
+                    setClass(item, "square_grid_plane_move");
                 }
             }
         });
@@ -61,8 +61,13 @@ public class Plane extends Group {
         setOnMouseReleased(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                for( Node item : instance.getChildren() ) {
-                    removeClass(item,"square_grid_plane_move");
+                //Calculate the write position
+                double rightX = Math.round(instance.getLayoutX() / Main.SQUARE_WIDTH) * Main.SQUARE_WIDTH + Main.MARGIN;
+                double rightY = Math.round(instance.getLayoutY() / Main.SQUARE_HEIGHT) * Main.SQUARE_HEIGHT + Main.MARGIN;
+                instance.setLayoutX(rightX);
+                instance.setLayoutY(rightY);
+                for (Node item : instance.getChildren()) {
+                    removeClass(item, "square_grid_plane_move");
                 }
             }
         });

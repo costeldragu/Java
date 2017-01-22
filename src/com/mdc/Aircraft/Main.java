@@ -43,21 +43,14 @@ public class Main extends Application {
         primaryStage.getScene().getStylesheets().add(getClass().getResource("assets/css/style.css").toExternalForm());
 
         createBackgroundBoard(root, 5, 5);
+        root.getChildren().add(new Board());
         root.getChildren().add(new Plane());
         root.getChildren().add(new Plane());
         root.getChildren().add(new Plane());
 
-        Label testControl = new Label("| 1234567890 ___ TRON");
-        root.getChildren().add(testControl);
-//
-//
-//
-//
-//
-//        root.getChildren().add(new Plane());
-//        root.getChildren().add(new Plane());
 
-
+//        Label testControl = new Label("| 1234567890 ___ TRON");
+//        root.getChildren().add(testControl);
     }
 
     /**
@@ -66,7 +59,6 @@ public class Main extends Application {
      * @return
      */
     private Rectangle createBackroundSquare(int x, int y) {
-
         Rectangle square = new Rectangle();
         square.setX(x);
         square.setY(y);
@@ -74,7 +66,6 @@ public class Main extends Application {
         square.setHeight(SQUARE_HEIGHT);
         square.getStyleClass().add("math_square");
         return square;
-
     }
 
     /**
