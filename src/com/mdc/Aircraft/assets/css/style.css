@@ -28,10 +28,26 @@
 }
 
 .board-top-left{
+    -fx-background-image: url("../images/BoardTopLeft.png");
+    -fx-background-position: top left;
+}
+
+.board-bottom-left{
     -fx-background-image: url("../images/BoardBottomRight.png");
-    -fx-background-repeat: stretch;
-    -fx-background-size: 900 506;
-    -fx-background-position: center center;
-    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
-    -fx-background-color: #3f0fce;
+    -fx-background-position: bottom right;
+}
+
+.board {
+
+    -fx-border-color: red;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+}
+
+.board-label {
+    -fx-font-family:BYRIL_Sea_Battle2, sans-serif;
+    -fx-font-size: 20;
+    -fx-text-fill: #292bb2;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
 }

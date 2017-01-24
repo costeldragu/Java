@@ -44,6 +44,8 @@ public class Main extends Application {
 
         createBackgroundBoard(root, 5, 5);
         root.getChildren().add(new Board());
+        root.getChildren().add(new Board(16,16,465,142));
+
         root.getChildren().add(new Plane());
         root.getChildren().add(new Plane());
         root.getChildren().add(new Plane());
