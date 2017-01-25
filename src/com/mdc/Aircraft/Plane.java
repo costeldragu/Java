@@ -1,6 +1,8 @@
 package com.mdc.Aircraft;
 
+import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -23,7 +25,7 @@ import java.util.List;
 public class Plane extends Pane {
     private Plane instance;
     private DragContext drag;
-    private int orientation = 3;
+    private int orientation = 1;
     private Label rotate;
     private List<PlaneRectangle> sqares = new ArrayList<>();
     private double space = (Main.SQUARE_WIDTH / 2);
@@ -33,7 +35,7 @@ public class Plane extends Pane {
         attachEvents();
         createSqareArray();
         drawPlane();
-        drawRotationAction();
+        //drawRotationAction();
         setLayoutX(Main.MARGIN);
         setLayoutY(Main.MARGIN);
         drag = new DragContext();
@@ -141,6 +143,18 @@ public class Plane extends Pane {
 
             }
         });
+
+        setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (orientation < 4) {
+                    ++orientation;
+                } else {
+                    orientation = 1;
+                }
+                drawPlane();
+            }
+        });
     }
 
     private PlaneRectangle createSquare(int x, int y) {
@@ -169,20 +183,22 @@ public class Plane extends Pane {
             double moveX = 0;
             double moveY = 0;
             if (x == 0) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY = space;
+                moveX = Main.SQUARE_WIDTH * 2;
+                moveY = 0;
             }
             if (x > 0 && x < 6) {
-                moveX = Main.SQUARE_WIDTH * (x - 1) + space;
-                moveY = Main.SQUARE_HEIGHT + space;
+                moveX = Main.SQUARE_WIDTH * (x - 1) ;
+                moveY = Main.SQUARE_HEIGHT ;
             }
             if (x == 6) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY = Main.SQUARE_HEIGHT * 2 + space;
+
+                moveX = Main.SQUARE_WIDTH * 2 ;
+                moveY = Main.SQUARE_HEIGHT * 2  ;
             }
+
             if (x > 6) {
-                moveY = Main.SQUARE_HEIGHT * 3 + space;
-                moveX = Main.SQUARE_WIDTH * (x - 6) + space;
+                moveY = Main.SQUARE_HEIGHT * 3 ;
+                moveX = Main.SQUARE_WIDTH * (x - 6) ;
             }
             doTransition((PlaneRectangle) sqares.get(x), moveX, moveY);
         }
@@ -193,22 +209,22 @@ public class Plane extends Pane {
             double moveX = 0;
             double moveY = 0;
             if (x < 3) {
-                moveX = Main.SQUARE_WIDTH * (x + 1) + space;
-                moveY = space;
+                moveX = Main.SQUARE_WIDTH * (x + 1) ;
+                moveY = 0;
             }
             if (x == 3) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY = Main.SQUARE_HEIGHT + space;
+                moveX = Main.SQUARE_WIDTH * 2 ;
+                moveY = Main.SQUARE_HEIGHT ;
             }
 
             if (x > 3 && x < 9) {
-                moveX = Main.SQUARE_WIDTH * (x - 4) + space;
-                moveY = Main.SQUARE_HEIGHT * 2 + space;
+                moveX = Main.SQUARE_WIDTH * (x - 4) ;
+                moveY = Main.SQUARE_HEIGHT * 2 ;
             }
 
             if (x == 9) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY = Main.SQUARE_HEIGHT * 3 + space;
+                moveX = Main.SQUARE_WIDTH * 2 ;
+                moveY = Main.SQUARE_HEIGHT * 3 ;
             }
             doTransition((PlaneRectangle) sqares.get(x), moveX, moveY);
         }
@@ -219,32 +235,32 @@ public class Plane extends Pane {
             double moveX = 0;
             double moveY = 0;
             if (x == 0) {
-                moveX = Main.SQUARE_WIDTH + space;
-                moveY = space;
+                moveX = Main.SQUARE_WIDTH ;
+                moveY = 0;
             }
             if (x == 1) {
-                moveX = Main.SQUARE_WIDTH + space;
-                moveY = Main.SQUARE_HEIGHT + space;
+                moveX = Main.SQUARE_WIDTH ;
+                moveY = Main.SQUARE_HEIGHT ;
             }
             if (x == 2) {
-                moveX = Main.SQUARE_WIDTH * 3 + space;
-                moveY = Main.SQUARE_HEIGHT + space;
+                moveX = Main.SQUARE_WIDTH * 3 ;
+                moveY = Main.SQUARE_HEIGHT ;
             }
             if (x > 2 && x < 7) {
-                moveX = Main.SQUARE_WIDTH * (x - 3) + space;
-                moveY = Main.SQUARE_HEIGHT * 2 + space;
+                moveX = Main.SQUARE_WIDTH * (x - 3) ;
+                moveY = Main.SQUARE_HEIGHT * 2 ;
             }
             if (x == 7) {
-                moveX = Main.SQUARE_WIDTH + space;
-                moveY = Main.SQUARE_HEIGHT * 3 + space;
+                moveX = Main.SQUARE_WIDTH ;
+                moveY = Main.SQUARE_HEIGHT * 3 ;
             }
             if (x == 8) {
-                moveX = Main.SQUARE_WIDTH * 3 + space;
-                moveY = Main.SQUARE_HEIGHT * 3 + space;
+                moveX = Main.SQUARE_WIDTH * 3 ;
+                moveY = Main.SQUARE_HEIGHT * 3 ;
             }
             if (x == 9) {
-                moveX = Main.SQUARE_WIDTH + space;
-                moveY = Main.SQUARE_HEIGHT * 4 + space;
+                moveX = Main.SQUARE_WIDTH ;
+                moveY = Main.SQUARE_HEIGHT * 4 ;
             }
             doTransition((PlaneRectangle) sqares.get(x), moveX, moveY);
         }
@@ -256,32 +272,32 @@ public class Plane extends Pane {
             double moveX = 0;
             double moveY = 0;
             if (x == 0) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY =  space;
+                moveX = Main.SQUARE_WIDTH * 2 ;
+                moveY =  0;
             }
             if (x == 1) {
-                moveX =  space;
-                moveY = Main.SQUARE_HEIGHT + space;
+                moveX =  0;
+                moveY = Main.SQUARE_HEIGHT ;
             }
             if (x == 2) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY = Main.SQUARE_HEIGHT + space;
+                moveX = Main.SQUARE_WIDTH * 2 ;
+                moveY = Main.SQUARE_HEIGHT ;
             }
             if (x > 2 && x < 7) {
-                moveX = Main.SQUARE_WIDTH * (x - 3) + space;
-                moveY = Main.SQUARE_HEIGHT * 2 + space;
+                moveX = Main.SQUARE_WIDTH * (x - 3) ;
+                moveY = Main.SQUARE_HEIGHT * 2 ;
             }
             if (x == 7) {
-                moveX = space;
-                moveY = Main.SQUARE_HEIGHT * 3 + space;
+                moveX = 0;
+                moveY = Main.SQUARE_HEIGHT * 3 ;
             }
             if (x == 8) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY = Main.SQUARE_HEIGHT * 3 + space;
+                moveX = Main.SQUARE_WIDTH * 2 ;
+                moveY = Main.SQUARE_HEIGHT * 3 ;
             }
             if (x == 9) {
-                moveX = Main.SQUARE_WIDTH * 2 + space;
-                moveY = Main.SQUARE_HEIGHT * 4 + space;
+                moveX = Main.SQUARE_WIDTH * 2 ;
+                moveY = Main.SQUARE_HEIGHT * 4 ;
             }
             doTransition((PlaneRectangle) sqares.get(x), moveX, moveY);
         }
@@ -289,18 +305,17 @@ public class Plane extends Pane {
 
 
     private void doTransition(PlaneRectangle square, double moveX, double moveY) {
+        square.toFront();
         double currentX = square.getMovedX();
         double currentY = square.getMovedY();
-        Path path = new Path();
-        path.getElements().add(new MoveTo(currentX, currentY));
-        path.getElements().add(new LineTo(moveX, moveY));
-        PathTransition transition = new PathTransition();
-        transition.setNode(square);
-        transition.setDuration(Duration.seconds(1));
-        transition.setPath(path);
+        TranslateTransition transition = new TranslateTransition(new Duration(1 * 1000),square);
+        transition.setFromX(currentX);
+        transition.setFromY(currentY);
+        transition.setToX(moveX);
+        transition.setToY(moveY);
+        transition.setInterpolator(Interpolator.EASE_BOTH);
         transition.play();
         square.setMovedX(moveX).setMovedY(moveY);
-
     }
 
 
