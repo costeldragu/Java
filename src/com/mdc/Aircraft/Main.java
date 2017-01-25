@@ -17,7 +17,7 @@ import javafx.scene.text.Font;
 
 public class Main extends Application {
 
-    public final static int SQUARE_WIDTH = 25;
+    public final static int SQUARE_WIDTH =25;
     public final static int SQUARE_HEIGHT = 25;
     final static int MARGIN = 5;
     private final static int BOARD_ROW = 24;

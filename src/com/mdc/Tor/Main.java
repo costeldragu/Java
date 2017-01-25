@@ -2,8 +2,7 @@ package com.mdc.Tor;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.*;
-import org.apache.http.*;
-import org.apache.*;
+
 
 /**
  * Created by CaDyMaN on 14.01.2017.
