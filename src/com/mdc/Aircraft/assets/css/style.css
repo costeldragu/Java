@@ -44,6 +44,13 @@
     /*-fx-border-width: 1;*/
 }
 
+.rotate {
+    -fx-background-image: url("../images/View-refresh_Gion_simple.svg.png");
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+}
+
+
 .board-label {
     -fx-font-family:BYRIL_Sea_Battle2, sans-serif;
     -fx-font-size: 20;
