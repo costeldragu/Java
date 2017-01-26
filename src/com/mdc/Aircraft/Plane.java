@@ -129,6 +129,8 @@ public class Plane extends Pane {
                     double newYPosition = drag.initialTranslateY + dragY - drag.mouseAnchorY;
                     instance.setLayoutX(newXPosition);
                     instance.setLayoutY(newYPosition);
+
+
                 }
 
             }

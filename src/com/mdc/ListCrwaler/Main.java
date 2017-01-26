@@ -14,7 +14,7 @@ public class Main {
         List<Thread> treades = new ArrayList<>();
 
         for(int x =0 ; x<1000;++x) {
-            treades.add(new Thread(new SearchUrl("t"+x)));
+            treades.add(new Thread(new SearchUrl("http://www.google.ro/")));
         }
 
 
