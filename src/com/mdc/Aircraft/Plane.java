@@ -82,16 +82,14 @@ public class Plane extends Pane {
 
         rotate.setPrefSize(20, 20);
         rotate.getStyleClass().add("rotate");
-        rotate.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (orientation < 4) {
-                    ++orientation;
-                } else {
-                    orientation = 1;
-                }
-                drawPlane();
+
+        rotate.setOnMouseClicked(e -> {
+            if (orientation < 4) {
+                ++orientation;
+            } else {
+                orientation = 1;
             }
+            drawPlane();
         });
 
         getChildren().add(rotate);
@@ -129,6 +127,13 @@ public class Plane extends Pane {
                     double newYPosition = drag.initialTranslateY + dragY - drag.mouseAnchorY;
                     instance.setLayoutX(newXPosition);
                     instance.setLayoutY(newYPosition);
+
+                    //Calculate the write position
+                    int column = (int) Math.round(newXPosition / Main.SQUARE_WIDTH) ;
+                    int row = (int) Math.round(newYPosition / Main.SQUARE_HEIGHT)  ;
+
+                    System.out.println(column + " - " + row);
+
 
 
                 }
