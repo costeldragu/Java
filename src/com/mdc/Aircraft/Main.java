@@ -1,6 +1,8 @@
 package com.mdc.Aircraft;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -24,6 +26,7 @@ public class Main extends Application {
     private final static int BOARD_COLUMN = 36;
     private List PlayerBoard = new ArrayList<>();
     private List ClientBoard = new ArrayList<>();
+    private ObservableList<ObservableList> mainBoardGrid = FXCollections.observableArrayList();
 
 
     @Override
@@ -67,6 +70,10 @@ public class Main extends Application {
         square.setWidth(SQUARE_WIDTH);
         square.setHeight(SQUARE_HEIGHT);
         square.getStyleClass().add("math_square");
+        square.setOnMouseDragEntered(e -> System.out.println("Target: drag entered"));
+        square.setOnMouseDragOver(e -> System.out.println("Target: drag over"));
+        square.setOnMouseDragReleased(e -> System.out.println("Target: drag released"));
+        square.setOnMouseDragExited(e -> System.out.println("Target: drag exited"));
         return square;
     }
 
@@ -79,10 +86,13 @@ public class Main extends Application {
      */
     private void createBackgroundBoard(Pane root, int x, int y) {
         for (int row = 0; row < BOARD_ROW; ++row) {
+            ObservableList<Rectangle> rowOfRectangle = FXCollections.observableArrayList();
             for (int column = 0; column < BOARD_COLUMN; ++column) {
                 Rectangle square = createBackroundSquare((int) (column * SQUARE_WIDTH) + x, (row * SQUARE_HEIGHT) + y);
                 root.getChildren().add(square);
+                rowOfRectangle.add(column,square);
             }
+            mainBoardGrid.add(row,rowOfRectangle);
         }
     }
 
