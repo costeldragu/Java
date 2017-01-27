@@ -4,6 +4,7 @@ import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
 import javafx.animation.TranslateTransition;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -20,6 +21,7 @@ import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 /**
  * Created by CaDyMaN on 21.01.2017.
@@ -134,8 +136,10 @@ public class Plane extends Pane {
 
                     System.out.println(column + " - " + row);
 
+                    Rectangle r = (Rectangle) Main.mainBoardGrid.get(row).get(column);
 
 
+                   //r.getStyleClass().add("square_grid_over");
                 }
 
             }
@@ -158,25 +162,20 @@ public class Plane extends Pane {
             }
         });
 
-        setOnMouseEntered(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                fade.stop();
-                fade.setFromValue(0);
-                fade.setToValue(1);
-                fade.play();
-            }
+        setOnMouseEntered(e-> {
+            fade.stop();
+            fade.setFromValue(0);
+            fade.setToValue(1);
+            fade.play();
         });
 
-        setOnMouseExited(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                fade.stop();
-                fade.setFromValue(1);
-                fade.setToValue(0);
-                fade.play();
-            }
+        setOnMouseExited(e-> {
+            fade.stop();
+            fade.setFromValue(1);
+            fade.setToValue(0);
+            fade.play();
         });
+
 
 
     }
