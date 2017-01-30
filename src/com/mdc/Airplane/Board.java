@@ -14,7 +14,7 @@ import java.util.List;
 public class Board extends Pane {
     private int colums = 10;
     private int rows = 10;
-    private int brickSpace = 10;
+    public final static int BRICK_SPACE = 2;
     private Image squareBg = new Image(getClass().getResource("assets/images/square.png").toExternalForm());
 
 
@@ -38,7 +38,7 @@ public class Board extends Pane {
     private void createBoard() {
         for (int row = 0; row < rows; ++row) {
             for (int column = 0; column < colums; ++column) {
-                Rectangle square = createSquare((int) (row * Main.SQUARE_WIDTH) + brickSpace, (column * Main.SQUARE_HEIGHT) + brickSpace);
+                Rectangle square = createSquare((int) (row * Main.SQUARE_WIDTH)+(row*BRICK_SPACE), (column * Main.SQUARE_HEIGHT)+(column*BRICK_SPACE));
                 getChildren().add(square);
             }
         }
