@@ -12,6 +12,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.event.EventHandler;
 
 import java.awt.*;
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.control.Label;
@@ -26,8 +27,12 @@ public class Main extends Application {
     private final static int BOARD_COLUMN = 36;
     private List PlayerBoard = new ArrayList<>();
     private List ClientBoard = new ArrayList<>();
-    private ObservableList<ObservableList> mainBoardGrid = FXCollections.observableArrayList();
+    public static List<List> mainBoardGrid = new ArrayList<>();
 
+
+    public static List<List> getMainBoardGrid() {
+        return mainBoardGrid;
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -86,7 +91,7 @@ public class Main extends Application {
      */
     private void createBackgroundBoard(Pane root, int x, int y) {
         for (int row = 0; row < BOARD_ROW; ++row) {
-            ObservableList<Rectangle> rowOfRectangle = FXCollections.observableArrayList();
+            List<Rectangle> rowOfRectangle = new ArrayList<>();
             for (int column = 0; column < BOARD_COLUMN; ++column) {
                 Rectangle square = createBackroundSquare((int) (column * SQUARE_WIDTH) + x, (row * SQUARE_HEIGHT) + y);
                 root.getChildren().add(square);
