@@ -1,9 +1,11 @@
 package com.mdc.Streams;
 
+import java.io.Serializable;
+
 /**
  * Created by cdragu on 06.07.2017.
  */
-public class Employee {
+public class Employee implements Serializable {
     private String firstName;
     private String lastName;
     private String positions;
