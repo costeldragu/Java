@@ -15,6 +15,9 @@ public class ImageViewerBean extends JLabel {
     private static final int XPREFSIZE = 200;
     private static final int YPREFSIZE = 200;
 
+
+
+
     public ImageViewerBean() {
         setBorder(BorderFactory.createEtchedBorder());
     }
