@@ -5,20 +5,20 @@ import java.util.List;
 
 public class PetShop {
 
-    private List<Dog> dogs = new ArrayList<>();
-    private List<Cat> cats = new ArrayList<>();
+    private List<Animal> dogs = new ArrayList<>();
+    private List<Animal> cats = new ArrayList<>();
 
     PetShop() {
 
     }
 
-    public PetShop addDog(Dog dog) {
+    public PetShop addDog(Animal dog) {
         dogs.add(dog);
         return this;
 
     }
 
-    public PetShop addCat(Cat cat) {
+    public PetShop addCat(Animal cat) {
         cats.add(cat);
         return this;
     }
@@ -31,17 +31,17 @@ public class PetShop {
         return cats.size();
     }
 
-    public Dog sellDog(int Index) throws ArrayIndexOutOfBoundsException {
+    public Animal sellDog(int Index) throws ArrayIndexOutOfBoundsException {
         return dogs.get(Index);
     }
 
-    public Cat sellCat(int Index) throws ArrayIndexOutOfBoundsException {
+    public Animal sellCat(int Index) throws ArrayIndexOutOfBoundsException {
         return cats.get(Index);
     }
 
     public PetShop listDogs() {
 
-        for (Dog dog : dogs) {
+        for (Animal dog : dogs) {
             System.out.println(dog);
         }
 
@@ -50,7 +50,7 @@ public class PetShop {
     }
 
     public PetShop listCats() {
-        for (Cat cat : cats) {
+        for (Animal cat : cats) {
             System.out.println(cat);
         }
         return this;
