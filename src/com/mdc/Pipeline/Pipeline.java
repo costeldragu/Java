@@ -15,5 +15,11 @@ public class Pipeline {
         if (iterator.hasNext()) System.out.println(iterator.next());
         if (iterator.hasNext()) System.out.println(iterator.next());
 
+        //Pipe line
+        list.stream().filter(n -> n.length() == 4)
+                .sorted()
+                .limit(2)
+                .forEach(System.out::println);
+
     }
 }
