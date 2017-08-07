@@ -1,6 +1,7 @@
 package com.mdc.Pipeline;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Pipeline {
     public static void main(String[] args) {
@@ -20,6 +21,10 @@ public class Pipeline {
                 .sorted()
                 .limit(2)
                 .forEach(System.out::println);
+
+
+        final Stream<Integer> stream = Stream.of(1,2,3);
+        System.out.println(stream.reduce(0, (s, n) -> s + n));
 
     }
 }
