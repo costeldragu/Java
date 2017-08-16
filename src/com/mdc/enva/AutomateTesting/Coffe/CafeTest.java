@@ -1,7 +1,10 @@
 package com.mdc.enva.AutomateTesting.Coffe;
 
+
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class CafeTest {
     // can brew espresso
@@ -17,11 +20,11 @@ public class CafeTest {
 
         // Then - clause
         // it is an espresso
-        Assert.assertEquals(CoffeeType.Espresso, coffee.getType());
+        assertEquals("Coffe not good",CoffeeType.Espresso, coffee.getType());
         //no milk
-        Assert.assertEquals(0, coffee.getMilk());
+        assertEquals(0, coffee.getMilk());
         //that we've got enough coffee
-        Assert.assertEquals(7, coffee.getBeabs());
+        assertEquals(7, coffee.getBeabs());
     }
 
     /**
@@ -37,7 +40,7 @@ public class CafeTest {
         Coffee coffee = cafe.brew(CoffeeType.Espresso);
 
         // Then - clause
-        Assert.assertEquals(0, cafe.getBeansInStock());
+        assertEquals(0, cafe.getBeansInStock());
     }
 
     /**
