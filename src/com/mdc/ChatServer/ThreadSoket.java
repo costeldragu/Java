@@ -2,17 +2,20 @@ package com.mdc.ChatServer;
 
 import com.mysql.jdbc.StringUtils;
 
+import java.awt.font.NumericShaper;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
+import java.util.stream.IntStream;
 
 public class ThreadSoket implements Runnable {
     private Socket incoming;
-    private int lineHeaderLenght = 80;
+    private int lineHeaderLenght = 150;
     private char headerTableChar = '*';
     BlockingQueue<String> messages ;
 
@@ -78,9 +81,11 @@ public class ThreadSoket implements Runnable {
      */
     private String stringRepeat(String string, int times, boolean newline) {
         StringBuilder repeatString = new StringBuilder();
-        for (int x = 0; x < times; ++x) {
-            repeatString.append(string);
-        }
+        Collections.nCopies(times, 0).stream().forEach(i -> repeatString.append(string));
+
+//        for (int x = 0; x < times; ++x) {
+//            repeatString.append(string);
+//        }
         if (newline) {
             repeatString.append("\n\r");
         }
