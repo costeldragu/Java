@@ -1,4 +1,4 @@
-package com.mdc.enva.DesignPattern.Structural.Flyweight;
+package com.mdc.enva.DesignPattern.Structural.Flyweight.old;
 
 public class FlyweightPatternDemo {
     private static final String colors[] = { "Red", "Green", "Blue", "White", "Black" };

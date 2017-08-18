@@ -1,5 +1,8 @@
 package com.mdc.enva.DesignPattern.Structural.Proxy;
 
+/**
+ * Wrap and real object
+ */
 public class ProxyPatternDemo {
 
     public static void main(String[] args) {

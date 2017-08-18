@@ -1,5 +1,8 @@
 package com.mdc.enva.DesignPattern.Structural.Decorator;
 
+/**
+ * Add supplementary functionality to an object
+ */
 public class DecoratorPatternDemo {
     public static void main(String[] args) {
 
