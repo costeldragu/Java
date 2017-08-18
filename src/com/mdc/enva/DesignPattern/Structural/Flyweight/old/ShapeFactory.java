@@ -1,4 +1,4 @@
-package com.mdc.enva.DesignPattern.Structural.Flyweight;
+package com.mdc.enva.DesignPattern.Structural.Flyweight.old;
 
 import java.util.HashMap;
 
