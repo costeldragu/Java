@@ -2,6 +2,9 @@ package com.mdc.enva.DesignPattern.Behavioral.Iterator;
 
 import java.util.Iterator;
 
+/**
+ * Interate an object
+ */
 public class IteratorDemo {
     public static void main(String[] args) {
         // write your code here
