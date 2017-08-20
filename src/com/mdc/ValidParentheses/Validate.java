@@ -1,5 +1,7 @@
 package com.mdc.ValidParentheses;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -12,7 +14,8 @@ public class Validate {
         map.put('[', ']');
         map.put('{', '}');
 
-        Stack<Character> stack = new Stack<Character>();
+        Deque<Character> deque = new ArrayDeque<>();
+
         int tabs = 0;
 
         for (int i = 0; i < context.length(); i++) {
@@ -20,18 +23,18 @@ public class Validate {
 
             if (map.keySet().contains(curr)) {
                 System.out.printf(addTabs(tabs++) + "Add:"+ curr + "\n" );
-                stack.push(curr);
+                deque.addFirst(curr);
             } else if (map.values().contains(curr)) {
-                if (!stack.empty() && map.get(stack.peek()) == curr) {
+                if (!deque.isEmpty() && map.get(deque.peek()) == curr) {
                     System.out.println(addTabs(--tabs) + "Remove:"+curr + "\n");
-                    stack.pop();
+                    deque.pop();
                 } else {
                     return false;
                 }
             }
         }
 
-        return stack.empty();
+        return deque.isEmpty();
     }
 
     public static String addTabs(int tabs) {
