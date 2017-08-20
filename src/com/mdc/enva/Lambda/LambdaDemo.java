@@ -10,7 +10,8 @@ public class LambdaDemo {
 
         String x = "Costel";
 
-
+       new Thread(() -> System.out.println(x)).start();
+       new Thread(() -> System.out.println(x)).start();
 
     }
 }
