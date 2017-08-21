@@ -1,6 +1,5 @@
 package com.mdc.enva.Collection.Set.TreeSet;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -15,7 +14,7 @@ public class ProductCatalogue implements Iterable<Product> {
     }
 
 
-    @NotNull
+
     @Override
     public Iterator<Product> iterator() {
         return products.iterator();

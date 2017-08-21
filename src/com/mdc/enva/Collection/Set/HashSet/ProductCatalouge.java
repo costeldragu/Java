@@ -1,6 +1,6 @@
 package com.mdc.enva.Collection.Set.HashSet;
 
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -15,7 +15,7 @@ public class ProductCatalouge implements Iterable<Product> {
     }
 
 
-    @NotNull
+
     @Override
     public Iterator<Product> iterator() {
         return products.iterator();
