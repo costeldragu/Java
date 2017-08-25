@@ -13,4 +13,7 @@ public class Q {
         System.out.println(sum);
 
     }
+
+
 }
+

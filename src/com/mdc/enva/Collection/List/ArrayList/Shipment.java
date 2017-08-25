@@ -1,6 +1,5 @@
 package com.mdc.enva.Collection.List.ArrayList;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -47,7 +46,6 @@ public class Shipment implements Iterable<Product> {
         return 0;
     }
 
-    @NotNull
     @Override
     public Iterator<Product> iterator() {
         return products.iterator();
