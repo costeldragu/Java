@@ -12,8 +12,7 @@ public class T3 {
     }
 
 
-
-//    @Test
+    //    @Test
 //    public void test() {
 //        System.out.println(a);
 //    }
@@ -31,6 +30,38 @@ public class T3 {
     public void test3() {
 //        TipA b = new b().getInnerClass();
 //        b.getFromC();
+    }
+
+    @Test
+    public void test4() {
+        int flavors = 25;
+        int eaten = 0;
+        switch (flavors) {
+            case 25:
+                eaten++;
+            case 30:
+                eaten++;
+            case 40:
+                eaten += 2;
+            default:
+                eaten--;
+        }
+        System.out.print(eaten);
+    }
+
+    @Test
+    public void test5() {
+        String[] data = {};
+        if (data.length >= 1 && (data[0].equals("sound") || data[0].equals("logic")) && data.length < 2) {
+            System.out.print(data[0]);
+        }
+    }
+
+    @Test
+    public void test6() {
+        String[] os = new String[] { "Mac", "Linux", "Windows" };
+        Arrays.sort(os);
+        System.out.println(Arrays.binarySearch(os, "RedHat"));
     }
 }
 
@@ -89,7 +120,7 @@ class MyString implements Cloneable {
 }
 
 class BogdanDate {
-    private MyString date =new MyString("TextIs");
+    private MyString date = new MyString("TextIs");
 
     BogdanDate() {
     }
@@ -121,10 +152,12 @@ class b {
             c() {
                 System.out.println("from ce");
             }
+
             public void getFromC() {
                 System.out.println("getFromC");
             }
         }
-        return  new c();
+        return new c();
     }
 }
+
