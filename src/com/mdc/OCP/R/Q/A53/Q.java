@@ -3,7 +3,7 @@ package com.mdc.OCP.R.Q.A53;
 import java.util.ArrayList;
 import java.util.List;
 
-public class A53 {
+public class Q {
     public static void main(String[] args) {
         StringBuilder s1 = new StringBuilder("Hello Java!");
         String s2 = s1.toString();
