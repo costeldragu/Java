@@ -7,7 +7,7 @@ import java.util.TreeSet;
 public class Result {
     private int horses;
     private int[] power;
-    private Integer oldB=0;
+    private Integer oldB=-1;
 
     Result(int horses, int[] power) {
         this.horses = horses;
@@ -26,12 +26,13 @@ public class Result {
         while (iterator.hasNext()) {
             Integer a = (Integer) iterator.next();
             Integer b;
-            if (iterator.hasNext()) {
+            if(oldB == -1 && iterator.hasNext()) {
                 b = (Integer) iterator.next();
-            } else {
+            }else{
                 b = a;
                 a = oldB;
             }
+
             Integer difference = b - a;
             if (result == 0 || difference < result) {
                 result = difference;
