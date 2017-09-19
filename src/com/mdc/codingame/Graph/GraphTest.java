@@ -205,7 +205,7 @@ public class GraphTest {
                 {20,104},
         };
 
-        Arrays.sort(nodes, Comparator.comparing((int[] arr) -> arr[0]));
+        Arrays.sort(nodes, Comparator.comparing((int[] arr) -> arr[1]));
 
         System.out.println(Arrays.deepToString(nodes));
 
