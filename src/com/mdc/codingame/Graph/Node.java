@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Node {
+    public static String path;
     private int name;
     private Node parent;
     private String parentName;
@@ -75,6 +76,7 @@ public class Node {
         Node found = null;
         for (Map.Entry<Integer, Node> entry : connections.entrySet()) {
             found = entry.getValue();
+            path +="/" + found.getName();
             if(found.getName() == name ) {
                 break;
             }else{
