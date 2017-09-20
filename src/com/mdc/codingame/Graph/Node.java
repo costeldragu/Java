@@ -6,6 +6,7 @@ import java.util.Map;
 public class Node {
     private int name;
     private Node parent;
+    private String parentName;
     private Map<Integer, Node> connections = new HashMap<>();
 
     public Node(int name) {
@@ -18,6 +19,14 @@ public class Node {
 
     public void setParent(Node parent) {
         this.parent = parent;
+    }
+
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
     }
 
     /**
@@ -44,7 +53,7 @@ public class Node {
      * @param node
      */
     public void addConnection(Node node) {
-        System.out.println("Add connection to :" + getName() +" with name:" + node.getName());
+        System.out.println("Add connection  :" + node.getName() +" to node:" + getName());
         connections.put(node.getName(), node);
     }
 
