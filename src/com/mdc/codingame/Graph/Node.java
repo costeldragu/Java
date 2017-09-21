@@ -4,8 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Node {
+    public static String path;
     private int name;
     private Node parent;
+    private String parentName;
     private Map<Integer, Node> connections = new HashMap<>();
 
     public Node(int name) {
@@ -18,6 +20,14 @@ public class Node {
 
     public void setParent(Node parent) {
         this.parent = parent;
+    }
+
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
     }
 
     /**
@@ -44,7 +54,7 @@ public class Node {
      * @param node
      */
     public void addConnection(Node node) {
-        System.out.println("Add connection to :" + getName() +" with name:" + node.getName());
+        System.out.println("Add connection  :" + node.getName() +" to node:" + getName());
         connections.put(node.getName(), node);
     }
 
@@ -66,6 +76,7 @@ public class Node {
         Node found = null;
         for (Map.Entry<Integer, Node> entry : connections.entrySet()) {
             found = entry.getValue();
+            path +="/" + found.getName();
             if(found.getName() == name ) {
                 break;
             }else{
