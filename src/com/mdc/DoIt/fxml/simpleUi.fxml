@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" fx:controller="com.mdc.DoIt.SimpleUiController">
+    <children>
+        <Label text="First name" />
+        <TextField fx:id="myText" />
+        <Button text="Add" />
+        <VBox>
+            <Label contentDisplay="TOP" text="This go down" />
+        </VBox>
+      <Button mnemonicParsing="false" text="Button" />
+      <ComboBox prefWidth="150.0" />
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+      <TextFlow prefHeight="200.0" prefWidth="200.0" />
+      <TitledPane prefHeight="200.0" prefWidth="200.0" />
+      <TitledPane animated="false" text="untitled">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </TitledPane>
+    </children>
+</HBox>
