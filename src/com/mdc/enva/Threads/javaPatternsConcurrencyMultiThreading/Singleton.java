@@ -1,8 +1,9 @@
 package com.mdc.enva.Threads.javaPatternsConcurrencyMultiThreading;
 
 public class Singleton {
-    private static Singleton instance;
+    private static volatile Singleton instance;
     public static int intancesNumbers;
+    private Object key = new Object();
 
     private Singleton() {
     }
