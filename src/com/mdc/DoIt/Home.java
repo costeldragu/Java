@@ -19,7 +19,7 @@ public class Home extends Application {
         try {
             GridPane grid = FXMLLoader.load(getClass().getResource("fxml/ui.fxml"));
 
-            Scene scene = new Scene(grid, 300, 300);
+            Scene scene = new Scene(grid, 800, 600);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Do IT !!!");
             primaryStage.show();
