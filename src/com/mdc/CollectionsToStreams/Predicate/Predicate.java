@@ -6,8 +6,18 @@ public interface Predicate<T> {
         return s -> s.equals(string);
     }
 
+    /**
+     * Functional method test
+     * @param t
+     * @return
+     */
     public boolean test(T t);
 
+    /**
+     *
+     * @param other
+     * @return
+     */
     public default Predicate<T> and(Predicate<T> other) {
         return t -> test(t) && other.test(t);
     }
