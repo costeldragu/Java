@@ -1,7 +1,7 @@
-package com.mdc.CollectionsToStreams.Map;
+package com.mdc.Collections.CollectionsToStreams.Map;
 
-import com.mdc.CollectionsToStreams.City;
-import com.mdc.CollectionsToStreams.Person;
+import com.mdc.Collections.CollectionsToStreams.City;
+import com.mdc.Collections.CollectionsToStreams.Person;
 
 import java.util.*;
 

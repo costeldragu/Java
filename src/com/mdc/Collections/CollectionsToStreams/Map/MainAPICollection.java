@@ -1,6 +1,6 @@
-package com.mdc.CollectionsToStreams.Map;
+package com.mdc.Collections.CollectionsToStreams.Map;
 
-import com.mdc.CollectionsToStreams.Person;
+import com.mdc.Collections.CollectionsToStreams.Person;
 
 import java.util.ArrayList;
 import java.util.Arrays;

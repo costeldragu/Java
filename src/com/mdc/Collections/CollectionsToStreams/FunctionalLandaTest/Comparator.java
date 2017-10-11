@@ -1,4 +1,4 @@
-package com.mdc.CollectionsToStreams.FunctionalLandaTest;
+package com.mdc.Collections.CollectionsToStreams.FunctionalLandaTest;
 
 import java.util.function.Function;
 

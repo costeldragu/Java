@@ -1,9 +1,4 @@
-package com.mdc.CollectionsToStreams.FunctionalLandaTest;
-
-import com.mdc.CollectionsToStreams.Person;
-
-import java.util.function.Function;
-import java.util.function.Supplier;
+package com.mdc.Collections.CollectionsToStreams.FunctionalLandaTest;
 
 public class MainComparator {
     public static void main(String[] args) {

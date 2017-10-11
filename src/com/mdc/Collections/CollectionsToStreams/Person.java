@@ -1,4 +1,4 @@
-package com.mdc.CollectionsToStreams;
+package com.mdc.Collections.CollectionsToStreams;
 
 public class Person {
     private String firstName;

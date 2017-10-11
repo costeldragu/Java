@@ -1,4 +1,4 @@
-package com.mdc.CollectionsToStreams.Predicate;
+package com.mdc.Collections.CollectionsToStreams.Predicate;
 
 @FunctionalInterface
 public interface Predicate<T> {
