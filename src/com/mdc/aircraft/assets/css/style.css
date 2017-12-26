@@ -1,0 +1,60 @@
+
+
+.root {
+    -fx-font-family:BYRIL_Sea_Battle2, sans-serif;
+    -fx-font-size: 60;
+    -fx-stroke: #292bb2
+}
+
+.math_square {
+    -fx-fill: #ffffff;
+    -fx-stroke: #b3dbf8;
+    -fx-stroke-width: 1;
+}
+
+.square_grid_plane {
+    -fx-fill: red;
+    -fx-stroke: #3f0fce;
+    -fx-stroke-width: 1;
+}
+
+
+.square_grid_plane_move {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 10, 0.0, 0, 5);
+}
+
+.square_grid_over {
+    -fx-fill: red;
+}
+
+.board-top-left{
+    -fx-background-image: url("../images/BoardTopLeft.png");
+    -fx-background-position: top left;
+}
+
+.board-bottom-left{
+    -fx-background-image: url("../images/BoardBottomRight.png");
+    -fx-background-position: bottom right;
+}
+
+.board {
+
+    /*-fx-border-color: red;*/
+    /*-fx-border-style: solid;*/
+    /*-fx-border-width: 1;*/
+}
+
+.rotate {
+    -fx-background-image: url("../images/View-refresh_Gion_simple.svg.png");
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+}
+
+
+.board-label {
+    -fx-font-family:BYRIL_Sea_Battle2, sans-serif;
+    -fx-font-size: 20;
+    -fx-text-fill: #292bb2;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
