@@ -1,0 +1,11 @@
+.root {
+    -fx-font-family:BYRIL_Sea_Battle2, sans-serif;
+    -fx-font-size: 60;
+    -fx-stroke: #292bb2
+}
+
+.math_square {
+    -fx-fill: #ffffff;
+    -fx-stroke: #b3dbf8;
+    -fx-stroke-width: 1;
+}
