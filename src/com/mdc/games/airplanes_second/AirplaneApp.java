@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 /**
  * @author : Costel DRAGU
  * @version $Id:$
- * @package : com.mdc.airplanes_second
+ * @package : com.mdc.games.airplanes_second
  * @copyright Copyright (c) 2017
  * @date : 26.12.2017 14:21
  */

@@ -45,7 +45,7 @@ public class Plane extends Pane {
 
                 //  System.out.println(column + " - " + row);
 
-                // Rectangle r = (Rectangle) com.mdc.aircraft.Main.mainBoardGrid.get(row).get(column);
+                // Rectangle r = (Rectangle) com.mdc.games.aircraft.Main.mainBoardGrid.get(row).get(column);
 
 
                 //r.getStyleClass().add("square_grid_over");

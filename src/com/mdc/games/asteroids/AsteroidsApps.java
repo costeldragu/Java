@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @author : Costel DRAGU
  * @version $Id:$
- * @package : com.mdc.asteroids
+ * @package : com.mdc.games.asteroids
  * @copyright Copyright (c) 2017
  * @date : 26.12.2017 13:11
  */
