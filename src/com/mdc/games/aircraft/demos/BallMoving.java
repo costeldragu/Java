@@ -1,4 +1,4 @@
-package com.mdc.aircraft.demos;
+package com.mdc.games.aircraft.demos;
 
 
 import java.util.List;

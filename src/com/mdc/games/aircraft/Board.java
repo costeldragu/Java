@@ -1,4 +1,4 @@
-package com.mdc.aircraft;
+package com.mdc.games.aircraft;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;

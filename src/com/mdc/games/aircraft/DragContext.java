@@ -1,4 +1,4 @@
-package com.mdc.aircraft;
+package com.mdc.games.aircraft;
 
 /**
  * Created by CaDyMaN on 21.01.2017.

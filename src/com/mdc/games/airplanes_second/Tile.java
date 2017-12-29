@@ -1,4 +1,4 @@
-package com.mdc.airplanes_second;
+package com.mdc.games.airplanes_second;
 
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;

@@ -1,4 +1,4 @@
-package com.mdc.asteroids;
+package com.mdc.games.asteroids;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;

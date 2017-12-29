@@ -1,4 +1,4 @@
-package com.mdc.aircraft;
+package com.mdc.games.aircraft;
 
 import javafx.application.Application;
 import javafx.scene.Group;

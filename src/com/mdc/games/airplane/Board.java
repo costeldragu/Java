@@ -1,4 +1,4 @@
-package com.mdc.airplane;
+package com.mdc.games.airplane;
 
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;

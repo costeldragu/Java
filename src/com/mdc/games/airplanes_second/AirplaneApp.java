@@ -1,4 +1,4 @@
-package com.mdc.airplanes_second;
+package com.mdc.games.airplanes_second;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;

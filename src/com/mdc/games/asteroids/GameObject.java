@@ -1,4 +1,4 @@
-package com.mdc.asteroids;
+package com.mdc.games.asteroids;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
 /**

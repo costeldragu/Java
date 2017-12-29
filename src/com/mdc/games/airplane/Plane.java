@@ -1,4 +1,4 @@
-package com.mdc.airplane;
+package com.mdc.games.airplane;
 
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
@@ -40,8 +40,8 @@ public class Plane extends Pane {
                 instance.setLayoutY(newYPosition);
 
                 //Calculate the write position
-                int column = (int) Math.round(newXPosition / com.mdc.aircraft.Main.SQUARE_WIDTH);
-                int row = (int) Math.round(newYPosition / com.mdc.aircraft.Main.SQUARE_HEIGHT);
+                int column = (int) Math.round(newXPosition / com.mdc.games.aircraft.Main.SQUARE_WIDTH);
+                int row = (int) Math.round(newYPosition / com.mdc.games.aircraft.Main.SQUARE_HEIGHT);
 
                 //  System.out.println(column + " - " + row);
 
