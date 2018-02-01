@@ -1,0 +1,40 @@
+package com.mdc.beans;
+import java.beans.PropertyChangeEvent;
+/**
+ * Created by cdragu on 26.01.2017.
+ */
+public class Main {
+    public static void main(String[] args) {
+        // write your code here
+        final Employee e1 = new Employee("John Jacobs", 2000.0);
+
+        // Compute the tax
+        computeTax(e1.getSalary());
+
+        // Add a property change listener to e1
+        e1.addPropertyChangeListener(Main::handlePropertyChange);
+
+        // Change the salary
+        e1.setSalary(3000.00);
+        e1.setSalary(3000.00); // No change notification is sent.
+        e1.setSalary(6000.00);
+    }
+
+
+    public static void handlePropertyChange(PropertyChangeEvent e) {
+        String propertyName = e.getPropertyName();
+
+        if ("salary".equals(propertyName)) {
+            System.out.print("Salary has changed. ");
+            System.out.print("Old:" + e.getOldValue());
+            System.out.println(", New:" + e.getNewValue());
+            computeTax((Double)e.getNewValue());
+        }
+    }
+
+    public static void computeTax(double salary) {
+        final double TAX_PERCENT = 20.0;
+        double tax = salary * TAX_PERCENT/100.0;
+        System.out.println("Salary:" + salary + ", Tax:" + tax);
+    }
+}
